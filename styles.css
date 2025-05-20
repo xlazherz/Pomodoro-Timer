@@ -1,0 +1,199 @@
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 15px;
+}
+
+.container {
+  background: #2e2e3e;
+  padding: 20px 15px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1
+{
+  margin: 5px;
+  font-size: 40px;
+}
+
+/* Timer and loop settings */
+#timeSettings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.time-setters {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.time-box,
+.loop-setter {
+  background: #3a3a50;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.time-box {
+  flex: 1 1 140px;
+}
+
+.time-box label,
+.loop-setter label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.inputs,
+.controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.inputs input,
+.loop-setter input {
+  width: 55px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  -moz-appearance: textfield;
+}
+
+.loop-setter {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.loop-setter input {
+  width: 70px;
+  margin-left: 10px;
+}
+
+/* Remove arrows from number inputs (Chrome & Firefox) */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Custom background colors */
+.work-box {
+  background: #2f6d2f;
+  margin-bottom: 15px
+}
+
+.rest-box {
+  background: #204070;
+  margin-top: 0px;
+}
+
+/* Control buttons */
+.controls {
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.controls button {
+  flex: 1;
+  padding: 12px 0;
+  background: #5c67f2;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #4851c7;
+}
+
+/* Timer display */
+.timer #countdown {
+  font-size: 48px;
+  margin: 15px 0;
+  user-select: none;
+}
+
+.loops-remaining {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Phase background effects */
+.work-phase {
+  background: linear-gradient(135deg, #228B22, #9ACD32);
+  color: black;
+}
+
+.rest-phase {
+  background: linear-gradient(135deg, #00008B, #1E90FF);
+  color: white;
+}
+
+.finished-phase {
+  background: linear-gradient(135deg, #FF4500, #FFD700);
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .time-setters {
+    flex-direction: column;
+  }
+
+  .time-box {
+    flex: none;
+    width: 100%;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls button {
+    margin: 5px 0;
+  }
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+  <h1>Pomodoro Timer</h1>
+
+<!-- Wrap these sections inside one container -->
+<div id="settings">
+  <div id="timeSettings">
+  <div class="time-setters">
+    <div class="time-box work-box">
+      <label>Work Time:</label>
+      <div class="inputs">
+        <input type="number" id="workMinutes" value="25" min="0" max="59" /> min
+        <input type="number" id="workSeconds" value="0" min="0" max="59" /> sec
+      </div>
+    </div>
+    <div class="time-box rest-box">
+      <label>Rest Time:</label>
+      <div class="inputs">
+        <input type="number" id="restMinutes" value="5" min="0" max="59" /> min
+        <input type="number" id="restSeconds" value="0" min="0" max="59" /> sec
+      </div>
+    </div>
+  </div>
+
+  <div class="loop-setter">
+    <label>Loops:
+      <input type="number" id="loops" value="3" min="1" />
+    </label>
+  </div>
+</div>
+
+<!-- Buttons Always Visible -->
+<div class="controls">
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+  <button id="resetBtn">Reset</button>
+</div>
+</div>
+
+
+  <!-- Countdown -->
+  <div class="timer">
+    <h2 id="phase">Ready</h2>
+    <div id="countdown">00:00</div>
+  </div>
+
+  <!-- Loops Remaining -->
+  <div class="loops-remaining">
+    <p>Loops Remaining: <span id="loopCount">0</span></p>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
